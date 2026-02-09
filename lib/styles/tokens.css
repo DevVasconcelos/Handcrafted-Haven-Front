@@ -1,0 +1,24 @@
+:root {
+  /* Colors */
+  --bg: #FAF7F2;
+  --text: #1F1B16;
+  --muted: #5E564F;
+  --border: #E6DED4;
+  
+  --primary: #C2412D;
+  --primaryDark: #4B2E2A;
+  --primaryLight: #FFD7C2;
+  --accent1: #5A6B2F;
+  --accent2: #355C7D;
+  --accent3: #D6A11E;
+  
+  --success: #1E7D4F;
+  
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+}
