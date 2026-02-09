@@ -78,13 +78,14 @@ export default function AddProductForm() {
       const product = await productService.create(productData);
 
       if (uploadedImages && uploadedImages.length > 0) {
-        await productService.addImages(product.id, {
-          images: uploadedImages.map((img, index) => ({
+        await productService.addImages(
+          product.id,
+          uploadedImages.map((img, index) => ({
             url: img.url,
             alt: formData.title,
             is_primary: index === 0
           }))
-        });
+        );
       }
 
       router.push('/dashboard');
