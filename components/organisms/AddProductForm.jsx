@@ -57,7 +57,10 @@ export default function AddProductForm() {
         return;
       }
 
-      const uploadedImages = await uploadService.uploadMultiple(images, 'products');
+      let uploadedImages = await uploadService.uploadMultiple(images, 'products');
+      if (uploadedImages && !Array.isArray(uploadedImages)) {
+        uploadedImages = [uploadedImages]; // garante array mesmo com 1 imagem
+      }
 
       const productData = {
         title: formData.title,
