@@ -51,6 +51,41 @@ export default function AddProductForm() {
     setIsSubmitting(true);
 
     try {
+      const title = formData.title.trim();
+      const description = formData.description.trim();
+      const priceValue = parseFloat(formData.price);
+      const stockValue = parseInt(formData.stock, 10);
+
+      if (!title) {
+        setError('Product title is required');
+        setIsSubmitting(false);
+        return;
+      }
+
+      if (!description) {
+        setError('Description is required');
+        setIsSubmitting(false);
+        return;
+      }
+
+      if (!formData.categoryId) {
+        setError('Category is required');
+        setIsSubmitting(false);
+        return;
+      }
+
+      if (Number.isNaN(priceValue)) {
+        setError('Price is required');
+        setIsSubmitting(false);
+        return;
+      }
+
+      if (formData.stock === '' || Number.isNaN(stockValue)) {
+        setError('Stock quantity is required');
+        setIsSubmitting(false);
+        return;
+      }
+
       if (images.length === 0) {
         setError('Add at least one image');
         setIsSubmitting(false);
@@ -63,11 +98,11 @@ export default function AddProductForm() {
       }
 
       const productData = {
-        title: formData.title,
-        description: formData.description,
+        title,
+        description,
         category_id: parseInt(formData.categoryId),
-        price: parseFloat(formData.price),
-        stock: parseInt(formData.stock),
+        price: priceValue,
+        stock: stockValue,
         sku: formData.sku || undefined,
         materials: formData.materials || undefined,
         dimensions: formData.dimensions || undefined,
@@ -103,7 +138,7 @@ export default function AddProductForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
+    <form onSubmit={handleSubmit} className="space-y-8" noValidate>
       {error && (
         <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
           {error}
