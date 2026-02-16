@@ -6,9 +6,6 @@ export default function Footer() {
       <nav className="max-w-300 mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8" aria-label="Footer navigation">
         <div>
           <h4 className="text-sm font-bold text-(--text) mb-4 uppercase tracking-wider">Shop</h4>
-          <Link href="/categories" className="block text-(--muted) mb-1 hover:text-(--primary) transition-colors focus:outline-none focus:text-(--primary)">
-            Categories
-          </Link>
           <Link href="#" className="block text-(--muted) mb-1 hover:text-(--primary) transition-colors focus:outline-none focus:text-(--primary)">
             New Products
           </Link>

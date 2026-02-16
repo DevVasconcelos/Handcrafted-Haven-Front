@@ -9,7 +9,6 @@ import RelatedProducts from "../organisms/RelatedProducts";
 export default function ProductDetail({ product, relatedProducts }) {
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: product.category, href: "/categories" },
     { label: product.title }
   ];
 

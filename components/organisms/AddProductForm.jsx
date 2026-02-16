@@ -126,7 +126,15 @@ export default function AddProductForm() {
       router.push('/dashboard');
     } catch (err) {
       console.error('Error creating product:', err);
-      setError(err.response?.data?.message || 'Error creating product');
+      const apiErrors = err.response?.data?.errors;
+      if (Array.isArray(apiErrors) && apiErrors.length > 0) {
+        const formatted = apiErrors
+          .map((item) => `${item.field || 'campo'}: ${item.message}`)
+          .join(' | ');
+        setError(formatted);
+      } else {
+        setError(err.response?.data?.message || 'Error creating product');
+      }
     } finally {
       setIsSubmitting(false);
     }

@@ -36,9 +36,6 @@ export default function Header() {
             <Link href="/" className="relative text-(--muted) text-[15px] font-medium transition-all whitespace-nowrap hover:text-(--text) after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-(--primary) after:transition-[width] after:duration-300 hover:after:w-full">
               Home
             </Link>
-            <Link href="/categories" className="relative text-(--muted) text-[15px] font-medium transition-all whitespace-nowrap hover:text-(--text) after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-(--primary) after:transition-[width] after:duration-300 hover:after:w-full">
-              Categories
-            </Link>
             <Link href="/sellers" className="relative text-(--muted) text-[15px] font-medium transition-all whitespace-nowrap hover:text-(--text) after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-(--primary) after:transition-[width] after:duration-300 hover:after:w-full">
               Sellers
             </Link>
@@ -149,13 +146,6 @@ export default function Header() {
                 className="px-4 py-3 rounded-lg text-(--text) font-medium hover:bg-(--bg) transition-colors focus:outline-none focus:ring-2 focus:ring-(--primary)/20"
               >
                 Home
-              </Link>
-              <Link 
-                href="/categories" 
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-3 rounded-lg text-(--text) font-medium hover:bg-(--bg) transition-colors focus:outline-none focus:ring-2 focus:ring-(--primary)/20"
-              >
-                Categories
               </Link>
               <Link 
                 href="/sellers" 
