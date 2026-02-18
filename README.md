@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Handcrafted Haven – Frontend
 
-## Getting Started
+Handcrafted Haven Frontend is a Next.js web application that communicates with an independent backend REST API to provide a full marketplace experience.
 
-First, run the development server:
+This project implements a structured Atomic Design architecture and integrates dynamically with backend endpoints for authentication, product management, and review functionality.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Live Application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔗 Deployed on Vercel:  
+https://handcrafted-haven-front.vercel.app/
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Features
 
-To learn more about Next.js, take a look at the following resources:
+- User registration
+- User authentication (login)
+- Product creation interface
+- Product detail visualization
+- Category filtering
+- Product review submission
+- Seller dashboard interface
+- Dynamic API data rendering
+- Loading and error state handling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗 Architecture
 
-## Deploy on Vercel
+The frontend follows Atomic Design principles:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+components/
+├── atoms/
+├── molecules/
+├── organisms/
+├── templates/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application communicates with the backend through a structured API service layer using HTTP requests.
+
+---
+
+## 🔁 End-to-End Integration
+
+The frontend connects to the backend to enable:
+
+1. User registration → persisted in database  
+2. Authentication flow → credential validation  
+3. Product creation → stored via API  
+4. Product retrieval → dynamic rendering  
+5. Review submission → relational data handling  
+
+---
+
+## 🛠 Technologies
+
+- Next.js
+- React
+- REST API integration
+- Modular component architecture
+
+---
+
+## 📌 Purpose
+
+This project demonstrates frontend-backend separation, scalable component architecture, and full-stack integration practices.
+
