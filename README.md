@@ -9,7 +9,8 @@ This project implements a structured Atomic Design architecture and integrates d
 ## 🌐 Live Application
 
 🔗 Deployed on Vercel:  
-https://handcrafted-haven-front.vercel.app/
+
+[Live Application](https://handcrafted-haven-front.vercel.app/)
 
 ---
 
